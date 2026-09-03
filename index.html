@@ -1,74 +1,71 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
   
   <style>
-    header{
-      background-color:#FFC0CB;
-      color:#FFB6C1;
+    header {
+      background-color: #FFC0CB;
+      color: #FFB6C1;
       text-align: center;
       max-width: 800px;
       margin: 0 auto;
       padding: 16px;
       border: 5px solid #DDA0DD;
-      
     }
     main {
-      backgroud-color:#DB7093;
-      color:#DDA0DD;
+      background-color: #DB7093; /* Correção: adicionado o 'n' em background */
+      color: #DDA0DD;
       text-align: center;
       max-width: 800px;
       margin: 0 auto;
       padding: 16px;
-      display: flex
+      display: flex; /* Correção: adicionado o ponto e vírgula */
     }
-    img{
-       width: 80px;
-       height: 80px;
+    img {
+      width: 80px;
+      height: 80px;
     }
   </style>
 </head>
   
 <body>
-      <header>
-        <h1>Minha página sobre noticias </h1>
-        <p>Aqui vou compartilhar um pouco sobre a noticia do dia a dia.</p>
-      </header>  
+  <header>
+    <h1>Minha página sobre notícias</h1>
+    <p>Aqui vou compartilhar um pouco sobre a notícia do dia a dia.</p>
+  </header>  
   
-   <main>
-     
-<article>
+  <main>
+    <article>
+      <img src="Gemini_Generated_Image_wnakl5wnakl5wnak.png" alt="uma mulher em um escritório de jornal, mexendo em um computador.">
+      <div>
+        <h2>Meu primeiro post</h2>
+        <p>Por: Emanuelly</p>
+        <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas sobre notícias.</p> 
+        <button>❤️ <span>0</span></button>  
+        <button>👍 <span>0</span></button>
+      </div>
+    </article>
+  </main>
 
-     <img src="Gemini_Generated_Image_wnakl5wnakl5wnak.png"
-       alt="uma mulher em um escritorio de jornal, mechndo em um computador.">
-     <div>
-       <h2>meu primeiro post</h2>
-     <p>Por: Emanuelly</p>
-     <p>Boas-vindas ao meu novo blog! Aqui vou
-     compartilhar dicas sobre noticias.</p> 
-       <button>❤️ <span>0</span>​</button>  
-       <button>👍 <span>0</span>​</button>
-     </div>
-     </article>
-   </main>
-</body>
-<script>
-      const botao = document.querySelectorAll("button");
-  
-     botoes.forEach(function(botao){
-      botao.addEventListener("click",botaoClicado);
-       
-      function botaoClicado(){
+  <script>
+    // Correção: mudado para 'botoes' no plural
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function(botao) {
+      botao.addEventListener("click", botaoClicado);
+
+      function botaoClicado() {
         console.log("fui clicado");
         let texto = botao.querySelector("span");
-        if (texto){
-        texto.textContent++;
-          }
+        if (texto) {
+          // Converte o texto para número antes de somar para evitar erros
+          texto.textContent = Number(texto.textContent) + 1;
         }
-      });
+      }
+    });
   </script>
+</body>
 </html>
