@@ -24,6 +24,7 @@
       max-width: 800px;
       margin: 0 auto;
       padding: 16px;
+      display: flex
     }
     img{
        width: 80px;
@@ -40,8 +41,8 @@
   
    <main>
      
-       
-    
+<article>
+
      <img src="Gemini_Generated_Image_wnakl5wnakl5wnak.png"
        alt="uma mulher em um escritorio de jornal, mechndo em um computador.">
      <div>
@@ -52,7 +53,7 @@
        <button>❤️ <span>0</span>​</button>  
        <button>👍 <span>0</span>​</button>
      </div>
-     
+     </article>
    </main>
 </body>
 <script>
@@ -65,9 +66,9 @@
         console.log("fui clicado");
         let texto = botao.querySelector("span");
         if (texto){
-        texto.textContent = Number(texto.textContent)+1;
-        });
-        
+        texto.textContent++;
+          }
+        }
       });
   </script>
 </html>
